@@ -7,6 +7,14 @@
     <meta name="description" content="Education-required : ">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    
+    <div id="loading"></div>
+    #loading {
+    position: absolute; width: 100%; height: 100%; background: url('spinner.gif') no-repeat center center;
+}
+  $(window).ready(function() {
+    $('#loading').hide();
+});
 
     <title>Education-required</title>
   </head>
