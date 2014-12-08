@@ -10,6 +10,38 @@
 
     <title>Education-required</title>
   </head>
+  <!--YOU NEED THESE FOR THE LIGHTBOX-->
+<link href="tanstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+
+
+<!--YOU NEED THIS JAVASCRIPT CODE FOR THE ROLLOVER-->
+<script type="text/javascript">
+if(document.images)
+{
+  var image_array = new Array();
+	
+  // path to the directory with images
+  var path = 'images/';
+  // enumeration of the "active" images
+  image_array[0] = path + "image1.gif";
+  image_array[1] = path + "image2.gif";
+  var preload_image = new Array ();
+ 
+  for(var i=0; i<image_array.length; i++)
+  {
+    preload_image[i]= new Image();
+    preload_image[i].src = image_array[i];
+  }
+}
+function rollover(name, filename)
+{
+  document.images[name].src = filename;
+}
+</script>
 
   <body>
 
@@ -59,7 +91,19 @@
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         <p class="copyright">Education-required maintained by <a href="https://github.com/pkemnoobs1">pkemnoobs1</a></p>
+        
+        
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      
+        
+         <!--THIS IS THE IMAGE WITH THE ROLLOVER AND LIGHTBOX-->
+< <a href="http://instagram.com/p/rNS4qvG4N_/?modal=true" rel="lightbox" onmouseover="rollover('button1','ElizabethTran.jpg')" 
+            onmouseout="rollover('button1','http://blogs.intel.com/jobs/files/2012/11/LisaDepew.jpg')"> 
+<img name="button1" src="http://blogs.intel.com/jobs/files/2012/11/LisaDepew.jpg"></a>
+      </footer>
+        
+        
+        
       </footer>
     </div>
 
